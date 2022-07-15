@@ -1,4 +1,4 @@
 matplotlib==3.5.2
-mecab-python==0.996.3
+mecab-python==0.996
 streamlit==1.11.0
 wordcloud==1.8.2.2
