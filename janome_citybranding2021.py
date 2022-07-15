@@ -66,7 +66,7 @@ def create_wordcloud(wordlists):
     result = ' '.join(s for s in wordlists)
     st.write("ワードクラウド作成開始")
     wc = WordCloud(
-        font_path = "~/Library/Fonts/ヒラギノ角ゴシック W3.ttc",
+        # font_path = "~/Library/Fonts/ヒラギノ角ゴシック W3.ttc",
         width=1920, 
         height=1080,
         prefer_horizontal=1,
