@@ -106,7 +106,7 @@ def main():
 
     st.subheader("分析対象から除く語")
     # ストップワードの処理
-    add_stopword = st.text_input()
+    add_stopword = st.text_input(label="ここに対象の語を入力")
     col1, col2 = st.columns(2)
     with col1:
         if st.button(label="追加", key=2):
