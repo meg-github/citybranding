@@ -55,7 +55,7 @@ def make_words2(texts):
                 #print(a_word.part_of_speech.split(",")[0])
         #st.write(words)
         #st.write("JanomeDone")
-    st.write(hinshi_list)
+    # st.write(hinshi_list)
     return(words)
 
 
