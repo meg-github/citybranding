@@ -116,7 +116,7 @@ def main():
         if st.button(label="削除", key=3): 
             if add_stopword in st.session_state["stop"]:
                 st.session_state["stop"].remove(add_stopword)
-    st.write("/".join(st.session_state["stop"]))  
+    st.write("現在のリスト:"+"\n"+"/".join(st.session_state["stop"]))  
     # 出力結果の表示
     #st.subheader("出力結果")
 
