@@ -6,8 +6,8 @@ from matplotlib import pyplot as plt
 from wordcloud import WordCloud
 
 
-st.set_page_config(page_title="WordCloud demo")
-st.title('WordCloud demo')
+st.set_page_config(page_title="十三プロジェクト用テキスト解析器")
+st.title('十三プロジェクト用テキスト解析器')
 if "stop" not in st.session_state:
   st.session_state["stop"] = ['街', 'なる', 'ある', '思う','いる','する','ほしい','の']
 
@@ -66,7 +66,7 @@ def create_wordcloud(wordlists):
     result = ' '.join(s for s in wordlists)
     st.write("ワードクラウド作成開始")
     wc = WordCloud(
-        font_path = "Meiryo.ttf",
+        font_path = "SourceHanSerifK-Light.otf",
         width=1920, 
         height=1080,
         prefer_horizontal=1,
@@ -96,7 +96,7 @@ def main():
     #words = ["ここ","解析","文章"]
     # 解釈するテキストの処理
     st.subheader("入力テキスト")
-    text = st.text_area("注：半角英数字は無視されます", "ここに解析したいテキストを入れてください．")
+    text = st.text_area("ここに解析したいテキストを入れてください．")
     if st.button(label="解析"):
         texts=text.split("\n")
         #st.write(texts)
@@ -104,9 +104,9 @@ def main():
         #words = make_words(texts)
 
 
-    st.subheader("ストップワード")
+    st.subheader("分析対象から除く語")
     # ストップワードの処理
-    add_stopword = st.text_input(label="注：半角英数字は無視されます")
+    # add_stopword = st.text_input(label="注：半角英数字は無視されます")
     col1, col2 = st.columns(2)
     with col1:
         if st.button(label="追加", key=2):
