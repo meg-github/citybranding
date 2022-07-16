@@ -96,7 +96,7 @@ def main():
     #words = ["ここ","解析","文章"]
     # 解釈するテキストの処理
     st.subheader("入力テキスト")
-    text = st.text_area("このシステムは入力された文章を解析し，文章に出現する単語を反映した画像を生成します．文章の中に多く出現する単語はより大きく，そうでない単語は小さく表示されます．"+"\n"+"ここに解析したいテキストを入れてください．")
+    text = st.text_area("このシステムは入力された文章を解析し，文章に出現する単語を反映した画像を生成します．文章の中に多く出現する単語はより大きく，そうでない単語は小さく表示されます．"+"\r\n"+"ここに解析したいテキストを入れてください．")
     if st.button(label="解析"):
         texts=text.split("\n")
         #st.write(texts)
@@ -106,7 +106,7 @@ def main():
 
     st.subheader("分析対象から除く語")
     # ストップワードの処理
-    add_stopword = st.text_input(label="ここでは分析の対象から除く単語を設定することができます．「もの」や「する」など，日常でも頻繁に使われる単語を対象外にすることで，入力した文章の特徴を観察することができます．"+"\n"+"下の枠に語を設定し，「追加」ボタンを押すことで追加できます．「削除」を押すと入力された単語がリストから削除されます．")
+    add_stopword = st.text_input(label="ここでは分析の対象から除く単語を設定することができます．「もの」や「する」など，日常でも頻繁に使われる単語を対象外にすることで，入力した文章の特徴を観察することができます．"+"\r\n"+"下の枠に語を設定し，「追加」ボタンを押すことで追加できます．「削除」を押すと入力された単語がリストから削除されます．")
     col1, col2 = st.columns(2)
     with col1:
         if st.button(label="追加", key=2):
@@ -116,7 +116,7 @@ def main():
         if st.button(label="削除", key=3): 
             if add_stopword in st.session_state["stop"]:
                 st.session_state["stop"].remove(add_stopword)
-    st.write("現在のリスト:"+"\n"+"/".join(st.session_state["stop"]))  
+    st.write("現在のリスト:"+"\r\n"+"/".join(st.session_state["stop"]))  
     # 出力結果の表示
     #st.subheader("出力結果")
 
