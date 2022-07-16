@@ -106,7 +106,7 @@ def main():
 
     st.subheader("分析対象から除く語")
     # ストップワードの処理
-    # add_stopword = st.text_input(label="注：半角英数字は無視されます")
+    add_stopword = st.text_input()
     col1, col2 = st.columns(2)
     with col1:
         if st.button(label="追加", key=2):
