@@ -8,6 +8,7 @@ from wordcloud import WordCloud
 
 st.set_page_config(page_title="十三プロジェクト用テキスト解析器")
 st.title('十三プロジェクト用テキスト解析器')
+
 if "stop" not in st.session_state:
   st.session_state["stop"] = ['街', 'なる', 'ある', '思う','いる','する','ほしい','の']
 
