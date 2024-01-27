@@ -3,7 +3,7 @@ import streamlit as st
 from janome.tokenizer import Tokenizer
 import collections
 from matplotlib import pyplot as plt
-import wordcloud_changed as WordCloud
+from wordcloud import WordCloud
 
 
 st.set_page_config(page_title="十三プロジェクト用テキスト解析器")
