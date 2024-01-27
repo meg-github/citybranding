@@ -67,10 +67,10 @@ def create_wordcloud(wordlists):
     st.write("ワードクラウド作成開始")
     wc = WordCloud(
         font_path = "SourceHanSerifK-Light.otf",
-        width=1920, 
-        height=1080,
-        prefer_horizontal=1,
-        background_color='white',
+        # width=1920, 
+        # height=1080,
+        # prefer_horizontal=1,
+        # background_color='white',
         include_numbers=True,
         colormap='tab20',
         regexp=r"[\w']+",
