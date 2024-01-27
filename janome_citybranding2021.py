@@ -70,7 +70,7 @@ def create_wordcloud(wordlists):
         # width=1920, 
         # height=1080,
         # prefer_horizontal=1,
-        # background_color='white',
+        background_color='white',
         include_numbers=True,
         colormap='tab20',
         regexp=r"[\w']+",
