@@ -1,9 +1,6 @@
-fontTools==4.47.2
-Janome==0.4.2
-matplotlib==3.5.2
-MeCab==0.996.3
-numpy==1.23.1
-Pillow==10.2.0
-streamlit==1.11.0
-tokenization==1.0.7
-wordcloud==1.8.2.2
+Janome
+matplotlib
+numpy
+Pillow
+streamlit
+tokenization
