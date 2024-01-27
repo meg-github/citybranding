@@ -17,12 +17,10 @@ hinshi_list={}
 
 #単語の数カウント
 def make_words(texts):
-    m = MeCab.Tagger ()
+    m = MeCab.Tagger()
     words=[]
     for sentence in texts:
         node = m.parseToNode(sentence)
-        #st.write("---")
-        #st.write(sentence)
         while node:
             hinshi = node.feature.split(",")[0]
             if hinshi in ["名詞","形容詞","動詞","固有名詞"]:
@@ -34,6 +32,8 @@ def make_words(texts):
             node = node.next
     st.write("言語処理完了")
     return(words)
+
+
 
 #m = Tokenizer()
 def make_words2(texts):
@@ -76,11 +76,11 @@ def create_wordcloud(wordlists):
         regexp=r"[\w']+",
     ).generate_from_text(result)
     st.write("ワードクラウド作成完了")
-    fig = plt.figure(figsize=(12,9))
-    ax = plt.axes()
 
+    fig, ax = plt.subplots(figsize=(12,9))
 
     st.set_option('deprecation.showPyplotGlobalUse', True)
+
     plt.tight_layout()
     plt.imshow(wc,interpolation="bilinear")
     plt.axis("off")
