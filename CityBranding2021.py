@@ -4,7 +4,8 @@ import streamlit as st
 import MeCab
 import collections
 from matplotlib import pyplot as plt
-from wordcloud import WordCloud
+import wordcloud_changed as WordCloud
+# from wordcloud import WordCloud
 
 st.set_page_config(page_title="WordCloud demo")
 st.title('WordCloud demo')
